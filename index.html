@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Building & Decoration — Prototype</title>
+    <meta
+      name="description"
+      content="Building and decoration company — prototype homepage"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">DekorYapı</div>
+        <nav class="nav">
+          <a href="hizmetler.html">Hizmetler</a>
+          <a href="projeler.html">Projeler</a>
+          <a href="#contact">İletişim</a>
+        </nav>
+        <a
+          class="btn-whatsapp"
+          href="https://wa.me/905555555555"
+          target="_blank"
+          rel="noopener"
+          >WhatsApp</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div>
+            <h1>Güvenilir Yapı & Dekorasyon Hizmetleri</h1>
+            <p>
+              İç dekorasyon, tadilat ve anahtar teslim projelerde kaliteli
+              işçilik ve zamanında teslim.
+            </p>
+            <div class="hero-ctas">
+              <a class="btn primary" href="#contact">Teklif Al</a>
+              <a class="btn outline" href="#projects">Projeleri Gör</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=60"
+              alt="interior"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services">
+        <div class="container">
+          <h2>Hizmetlerimiz</h2>
+          <div class="cards">
+            <article class="card">
+              <h3>İç Dekorasyon</h3>
+              <p>
+                Fonksiyonel, estetik çözümler — yaşam alanlarınızı yeniliyoruz.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Tadilat & Onarım</h3>
+              <p>Profesyonel tadilat ekipleri ile hızlı ve güvenli uygulama.</p>
+            </article>
+            <article class="card">
+              <h3>Anahtar Teslim Projeler</h3>
+              <p>Projeden uygulamaya tüm süreçlerde tek muhatap.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects">
+        <div class="container">
+          <h2>Projelerimiz</h2>
+          <p class="muted">Seçme işlerimiz — galeriye tıklayarak büyütün.</p>
+          <div class="gallery">
+            <button
+              class="thumb"
+              data-src="Projelerimiz
+"
+            >
+              <img
+                src="https://media.istockphoto.com/id/466836078/photo/house-with-sunloungers-on-patio-by-pool-at-dusk.jpg?s=612x612&w=0&k=20&c=NxanPPqJjoila1-gyBqlK_Vqmr7SX-Nt3kecOxRHzXU="
+                alt="project1"
+              />
+            </button>
+            <button
+              class="thumb"
+              data-src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=60"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=60"
+                alt="project2"
+              />
+            </button>
+            <button
+              class="thumb"
+              data-src="https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&w=1200&q=60"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&w=400&q=60"
+                alt="project3"
+              />
+            </button>
+            <button
+              class="thumb"
+              data-src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=60"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=400&q=60"
+                alt="project4"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lightbox modal -->
+      <div id="lightbox" class="lightbox hidden" aria-hidden="true">
+        <button class="lb-close" aria-label="Close">×</button>
+        <img class="lb-image" src="" alt="Expanded project" />
+      </div>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2>İletişim</h2>
+          <div class="contact-grid">
+            <form
+              class="contact-form"
+              action="mailto:info@example.com"
+              method="post"
+              enctype="text/plain"
+            >
+              <label>İsim<input name="name" required /></label>
+              <label>Telefon veya Email<input name="contact" /></label>
+              <label>Mesaj<textarea name="message" rows="5"></textarea></label>
+              <div class="form-actions">
+                <button class="btn primary" type="submit">Gönder</button>
+              </div>
+            </form>
+            <div class="contact-info">
+              <h3>Bizi arayın</h3>
+              <p>Telefon: <a href="tel:+905555555555">+90 555 555 55 55</a></p>
+              <h3>Adres</h3>
+              <p>İstanbul, Türkiye</p>
+              <div class="map">
+                <!-- Placeholder map embed -->
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18"
+                  style="border: 0; width: 100%; height: 200px"
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        © <span id="year"></span> DekorYapı — Tüm hakları saklıdır.
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

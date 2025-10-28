@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projeler — DekorYapı</title>
+    <meta name="description" content="Projelerimiz — DekorYapı" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">DekorYapı</div>
+        <nav class="nav">
+          <a href="index.html">Anasayfa</a>
+          <a href="hizmetler.html">Hizmetler</a>
+          <a href="projeler.html">Projeler</a>
+          <a href="index.html#contact">İletişim</a>
+        </nav>
+        <a
+          class="btn-whatsapp"
+          href="https://wa.me/905555555555"
+          target="_blank"
+          rel="noopener"
+          >WhatsApp</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" style="padding: 28px 0">
+        <div class="container hero-inner" style="grid-template-columns: 1fr">
+          <div>
+            <h1>Projelerimiz</h1>
+            <p class="muted">
+              Seçme projelerimiz: iç mekan tadilatları, dekorasyon ve anahtar
+              teslim işler.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" style="padding: 28px 0">
+        <div class="container">
+          <h2>Galeri</h2>
+          <p class="muted">
+            Aşağıdaki örnek işlerimiz proje aşamaları ve tamamlanmış halleriyle
+            yer almaktadır. Görseli tıklayarak büyütün.
+          </p>
+          <div class="gallery" style="margin-top: 14px">
+            <button
+              class="thumb"
+              data-src="https://images.unsplash.com/photo-1505691723518-36a6f90a0b77?auto=format&fit=crop&w=1200&q=60"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1505691723518-36a6f90a0b77?auto=format&fit=crop&w=400&q=60"
+                alt="project1"
+              />
+            </button>
+            <button
+              class="thumb"
+              data-src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=60"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=60"
+                alt="project2"
+              />
+            </button>
+            <button
+              class="thumb"
+              data-src="https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&w=1200&q=60"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&w=400&q=60"
+                alt="project3"
+              />
+            </button>
+            <button
+              class="thumb"
+              data-src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=60"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=400&q=60"
+                alt="project4"
+              />
+            </button>
+            <button
+              class="thumb"
+              data-src="https://images.unsplash.com/photo-1524758631624-0f0f3b3e7f2a?auto=format&fit=crop&w=1200&q=60"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1524758631624-0f0f3b3e7f2a?auto=format&fit=crop&w=400&q=60"
+                alt="project5"
+              />
+            </button>
+            <button
+              class="thumb"
+              data-src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=60"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=400&q=60"
+                alt="project6"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lightbox modal (reused) -->
+      <div id="lightbox" class="lightbox hidden" aria-hidden="true">
+        <button class="lb-close" aria-label="Close">×</button>
+        <img class="lb-image" src="" alt="Expanded project" />
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        © <span id="year"></span> DekorYapı — Tüm hakları saklıdır.
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
