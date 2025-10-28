@@ -6,6 +6,7 @@
     <title>Projeler — DekorYapı</title>
     <meta name="description" content="Projelerimiz — DekorYapı" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/projeler.css" />
   </head>
   <body>
     <header class="site-header">
@@ -47,7 +48,79 @@
             Aşağıdaki örnek işlerimiz proje aşamaları ve tamamlanmış halleriyle
             yer almaktadır. Görseli tıklayarak büyütün.
           </p>
-          <div class="gallery" style="margin-top: 14px">
+            <div class="projects-grid" id="projectsGrid">
+              <div class="projects-head">
+                <div>
+                  <h2>Projelerimiz</h2>
+                  <p class="muted">Seçme işlerimiz: iç mekan tadilatları, dekorasyon ve anahtar teslim projeler.</p>
+                </div>
+                <div class="filters" role="tablist" aria-label="Filter projects">
+                  <button class="filter active" data-filter="all">Tümü</button>
+                  <button class="filter" data-filter="ic-dekor">İç Dekorasyon</button>
+                  <button class="filter" data-filter="tadilat">Tadilat</button>
+                  <button class="filter" data-filter="anahtar-teslim">Anahtar Teslim</button>
+                </div>
+              </div>
+
+              <article class="project-card" data-category="ic-dekor">
+                <button class="thumb card-thumb" data-src="https://images.unsplash.com/photo-1505691723518-36a6f90a0b77?auto=format&fit=crop&w=1400&q=60" data-title="Modern Salon" data-desc="İç dekorasyon projesi — açık plan salon ve modern mobilya seçimi.">
+                  <img src="https://images.unsplash.com/photo-1505691723518-36a6f90a0b77?auto=format&fit=crop&w=600&q=60" alt="Modern Salon">
+                  <div class="overlay"><div class="ov-text"><strong>Modern Salon</strong><span>İç Dekorasyon</span></div></div>
+                </button>
+              </article>
+
+              <article class="project-card" data-category="tadilat">
+                <button class="thumb card-thumb" data-src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1400&q=60" data-title="Mutfak Tadilatı" data-desc="Eski mutfağın modern ve fonksiyonel hale getirilmesi.">
+                  <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=60" alt="Mutfak Tadilatı">
+                  <div class="overlay"><div class="ov-text"><strong>Mutfak Tadilatı</strong><span>Tadilat</span></div></div>
+                </button>
+              </article>
+
+              <article class="project-card" data-category="anahtar-teslim">
+                <button class="thumb card-thumb" data-src="https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&w=1400&q=60" data-title="Daire - Anahtar Teslim" data-desc="Anahtar teslim proje — tasarım, üretim ve uygulama.">
+                  <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&w=600&q=60" alt="Anahtar Teslim">
+                  <div class="overlay"><div class="ov-text"><strong>Daire - Anahtar Teslim</strong><span>Anahtar Teslim</span></div></div>
+                </button>
+              </article>
+
+              <article class="project-card" data-category="ic-dekor">
+                <button class="thumb card-thumb" data-src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1400&q=60" data-title="Küçük Salon Yenileme" data-desc="Küçük alanlar için fonksiyonel düzenleme ve depolama çözümleri.">
+                  <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=60" alt="Küçük Salon">
+                  <div class="overlay"><div class="ov-text"><strong>Küçük Salon Yenileme</strong><span>İç Dekorasyon</span></div></div>
+                </button>
+              </article>
+
+              <article class="project-card" data-category="tadilat">
+                <button class="thumb card-thumb" data-src="https://images.unsplash.com/photo-1524758631624-0f0f3b3e7f2a?auto=format&fit=crop&w=1400&q=60" data-title="Banyo Yenileme" data-desc="Banyo tadilatında su yalıtımı ve modern kaplama uygulamaları.">
+                  <img src="https://images.unsplash.com/photo-1524758631624-0f0f3b3e7f2a?auto=format&fit=crop&w=600&q=60" alt="Banyo Yenileme">
+                  <div class="overlay"><div class="ov-text"><strong>Banyo Yenileme</strong><span>Tadilat</span></div></div>
+                </button>
+              </article>
+
+              <article class="project-card" data-category="anahtar-teslim">
+                <button class="thumb card-thumb" data-src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1400&q=60" data-title="Ofis - Anahtar Teslim" data-desc="Küçük ofis alanı için anahtar teslim iç mekan projesi.">
+                  <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=600&q=60" alt="Ofis">
+                  <div class="overlay"><div class="ov-text"><strong>Ofis - Anahtar Teslim</strong><span>Anahtar Teslim</span></div></div>
+                </button>
+              </article>
+            </div>
+
+            <div class="projects-footer" style="margin-top:18px; display:flex; justify-content:center">
+              <button id="loadMore" class="btn outline">Daha fazla yükle</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Lightbox modal (reused with caption) -->
+        <div id="lightbox" class="lightbox hidden" aria-hidden="true">
+          <button class="lb-close" aria-label="Close">×</button>
+          <div class="lb-content">
+            <img class="lb-image" src="" alt="Expanded project">
+            <div class="lb-caption"><h3 class="lb-title"></h3><p class="lb-desc"></p></div>
+          </div>
+          <button class="lb-prev" aria-label="Previous">‹</button>
+          <button class="lb-next" aria-label="Next">›</button>
+        </div>
             <button
               class="thumb"
               data-src="https://images.unsplash.com/photo-1505691723518-36a6f90a0b77?auto=format&fit=crop&w=1200&q=60"
