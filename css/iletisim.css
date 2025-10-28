@@ -1,0 +1,114 @@
+/* Page-specific styles for İletişim (Contact) */
+.contact {
+  padding: 28px 0;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 20px;
+}
+.contact-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.04);
+}
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+
+  /* Form grid for two-column layout */
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .form-row.full {
+    grid-column: 1 / -1;
+  }
+  .form-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #e9edf2;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(18, 24, 40, 0.03);
+    transition: box-shadow 0.18s ease, transform 0.12s ease;
+  }
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #9aa3ad;
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus,
+  .contact-form select:focus {
+    outline: none;
+    box-shadow: 0 8px 22px rgba(17, 100, 102, 0.08);
+    transform: translateY(-1px);
+    border-color: var(--accent);
+  }
+
+  .form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .btn.primary {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    border: none;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(18, 100, 102, 0.12);
+    cursor: pointer;
+  }
+  .btn.primary:hover {
+    transform: translateY(-2px);
+  }
+
+  .form-success {
+    grid-column: 1 / -1;
+    background: #e6fbf7;
+    border-left: 4px solid var(--accent-2);
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: #0b5b50;
+  }
+  .hidden {
+    display: none;
+  }
+}
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e6e9ef;
+}
+.contact-info {
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.04);
+}
+.contact-info h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
