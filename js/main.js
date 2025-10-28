@@ -103,4 +103,33 @@ document.addEventListener("DOMContentLoaded", function () {
   // set year in footer
   const y = new Date().getFullYear();
   document.getElementById("year").textContent = y;
+
+  // If landing on contact via hash or with a service query, focus and prefill
+  try {
+    const isContactAnchor =
+      window.location.hash && window.location.hash.includes("#contact");
+    const params = new URLSearchParams(window.location.search);
+    if (isContactAnchor) {
+      // focus name field when scrolling to contact
+      setTimeout(() => {
+        const nameInput = document.getElementById("name");
+        if (nameInput) nameInput.focus();
+      }, 300);
+    }
+    if (params.has("service")) {
+      const svc = params.get("service");
+      const sel = document.getElementById("service");
+      if (sel) {
+        // try to match option by text, fallback to setting value
+        const option = Array.from(sel.options).find(
+          (o) => o.text === svc || o.value === svc
+        );
+        if (option) sel.value = option.value;
+        else sel.value = svc;
+      }
+    }
+  } catch (e) {
+    // ignore URL parsing errors
+    console.warn("Contact prefill error", e);
+  }
 });
