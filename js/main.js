@@ -104,6 +104,31 @@ document.addEventListener("DOMContentLoaded", function () {
   const y = new Date().getFullYear();
   document.getElementById("year").textContent = y;
 
+  // newsletter form (UI-only: show local confirmation)
+  const newsletterForm = document.getElementById("newsletterForm");
+  if (newsletterForm) {
+    newsletterForm.addEventListener("submit", (ev) => {
+      ev.preventDefault();
+      const email = document.getElementById("newsletterEmail");
+      const msg = newsletterForm.querySelector(".newsletter-msg");
+      if (!email || !email.value) {
+        if (msg) {
+          msg.textContent = "Lütfen geçerli bir e-posta adresi girin.";
+          msg.classList.remove("hidden");
+          setTimeout(() => msg.classList.add("hidden"), 3000);
+        }
+        return;
+      }
+      // show success (no backend here)
+      if (msg) {
+        msg.textContent = "Teşekkürler! Aboneliğiniz kaydedildi (örnek).";
+        msg.classList.remove("hidden");
+      }
+      newsletterForm.reset();
+      setTimeout(() => msg && msg.classList.add("hidden"), 4000);
+    });
+  }
+
   // If landing on contact via hash or with a service query, focus and prefill
   try {
     const isContactAnchor =
